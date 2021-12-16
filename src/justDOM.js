@@ -39,8 +39,10 @@ export class AppContainer extends AppComponent{
     this.context.hidden(!isVisible);
   }
   add(component){
+   window.onload = function(){
     this.context.append(component.getContext());
-  }
+  };
+}
 }
 
 
@@ -56,7 +58,9 @@ export class AppPage extends AppComponent{
     this.context.hidden(!isVisible);
   }
   add(component){
-    this.context.append(component.getContext());
+    window.onload = function(){
+      this.context.append(component.getContext());
+    };
   }
 }
 
@@ -69,7 +73,9 @@ export class AppForm extends AppComponent{
     this.context.hidden(!isVisible);
   }
   add(component){
-    this.context.append(component.getContext());
+    window.onload = function(){
+      this.context.append(component.getContext());
+    };
   }
 }
 
@@ -173,7 +179,9 @@ export class AppTable extends AppComponent{
     table.append(tbody.getContext());
   }
   add(component){
-    this.context.append(component.getContext());
+    window.onload = function(){
+      this.context.append(component.getContext());
+    };
   }
 }
- 
+
