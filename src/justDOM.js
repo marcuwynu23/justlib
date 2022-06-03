@@ -58,10 +58,7 @@ export class AppPage extends AppComponent{
     this.context.hidden(!isVisible);
   }
   add(component){
-    window.onload = function(context,component){
-      context.append(component.getContext());
-    };
-    window.onload = onLoad(this.context,component);
+    this.context.append(component.getContext());
   }
 }
 
