@@ -1,0 +1,2 @@
+uglifyjs src\lib.js -o dist\lib.js 
+uglifyjs src\lib-component.js -o dist\lib-component.js 

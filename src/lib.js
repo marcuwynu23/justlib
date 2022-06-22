@@ -1,15 +1,17 @@
-function getLocation(fn){
+const $reload = () =>{ window.location.reload() }
+
+const $getLocation = (fn) => {
   if (!navigator.geolocation) {
     alert("Geolocation Error!")
 	} else {
-		navigator.geolocation.getCurrentPosition(function (position) {
+		navigator.geolocation.getCurrentPosition( (position) => {
 			let { latitude, longitude } = position.coords
 			fn(latitude,longitude)
 		})
 	}
 }
 
-function sendJSONData(url,data){
+const $sendJSONData = (url,data) => {
   fetch(url,{
   method: "post",
   headers: {"Content-Type" : "application/json"},
@@ -21,7 +23,7 @@ function sendJSONData(url,data){
 }
 
 
-function sendData(url,data){
+const $sendData = (url,data) =>{
   fetch(url,{
   method: "post",
   body: new URLSearchParams(data)
@@ -30,3 +32,5 @@ function sendData(url,data){
   .then(text=>console.log(text))
   .catch(err=>console.error(err))
 }
+
+
