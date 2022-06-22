@@ -1,1 +1,1 @@
-Access Library here: https://cdn.jsdelivr.net/gh/marcuwynu23/justDOMjs/dist/justDOM.min.js
+Access Library here: https://cdn.jsdelivr.net/gh/marcuwynu23/justlib/dist/lib.js
